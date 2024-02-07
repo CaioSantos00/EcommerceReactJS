@@ -1,0 +1,71 @@
+@import '../../Sass/variaveis.scss';
+#divLogo {
+    margin: 10px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    svg {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+#logo {
+    width: 150px;
+}
+
+@keyframes brilho {
+    0% {
+      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Inicialmente, uma sombra branca suave */
+    }
+    50% {
+      text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.9); /* Brilho máximo no meio da animação */
+    }
+    100% {
+      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Volta para a sombra inicial no final */
+    }
+  }
+
+nav {
+    display: flex;
+    justify-content: center;
+    font-size: 1.1em;
+    ul {
+        display: flex;
+        margin: 8px;
+    }
+    li {
+        margin: 0px 5px;
+        list-style: none;
+        animation: brilho 2s infinite;
+        &:hover {
+            animation: none;
+            text-shadow: none;
+        }
+    }
+}
+
+
+@keyframes textRodando {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+#divWelcom {
+  background-color:$corTerciaria;
+  color: $corSecundaria;
+  padding: 3px;
+  overflow-x: hidden;
+}
+
+#welcom {
+  margin-bottom: 3px;
+  font-size: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: textRodando 13s linear infinite;
+}

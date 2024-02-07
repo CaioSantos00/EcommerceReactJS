@@ -1,0 +1,11 @@
+@import '../mixins/buttons.scss';
+
+.buttonsComFundo {
+    @include buttons($corSecundaria, $corPrimaria, 1px solid $corSecundaria, 1.2em, 8px);
+}
+
+.buttonsComFundo:hover {
+    transition: 1s;
+    background-color: $corPrimaria;
+    color: $corSecundaria;
+}

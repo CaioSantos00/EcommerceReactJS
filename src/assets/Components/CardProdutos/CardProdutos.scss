@@ -1,0 +1,41 @@
+.cardProduct {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 250px;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center; 
+    /*background: rgba(58, 58, 58, 0.027);
+    border: 1px solid rgba(255, 255, 255, 0.048);
+    backdrop-filter: blur(10px);*/
+    img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+.titleProdutos {
+    font-size: 1.2em;
+}
+
+@media screen and (max-width: 615px){
+    .cardProduct {
+        width: 180px;
+        img {
+            width: 180px;
+            height: 180px;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 475px){
+    .cardProduct {
+        width: 160px;
+        img {
+            width: 160px;
+            height: 160px;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+#tipoPagaments {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+#linksFooter {
+    display: flex;
+    font-size: 1.1em;
+    a {
+        padding: 6px;
+    }:hover {
+        text-decoration: underline;
+    }
+}

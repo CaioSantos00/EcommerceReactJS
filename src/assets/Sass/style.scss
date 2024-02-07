@@ -1,0 +1,49 @@
+@import './variaveis.scss';
+@import './components/global.scss';
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $corPrimaria;
+    color: $corSecundaria;
+    font-family: 'Gruppo', sans-serif;
+    //overflow-x: hidden;
+}
+
+main {
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: $corSecundaria;
+}
+
+section {
+    margin: 20px 220px;
+}
+
+@media screen and (max-width: 1017px){
+    section {
+        margin: 20px 150px;
+    }
+}
+
+@media screen and (max-width: 885px){
+    section {
+        margin: 20px 50px;
+    }
+}
+
+@media screen and (max-width: 615px){
+    section {
+        margin: 20px;
+    }
+}
+
+@media screen and (max-width: 475px){
+    section {
+        margin:20px;
+    }
+}

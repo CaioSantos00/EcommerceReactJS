@@ -1,0 +1,25 @@
+#holdCardsProducts {
+    margin: 20px 0px;
+    display: grid;
+    justify-content: center;
+    grid-template-areas: 'cardProduct cardProduct cardProduct cardProduct';
+    gap: 15px;
+}
+
+@media screen and (max-width: 1160px){
+    #holdCardsProducts {
+        grid-template-areas: 'cardProduct cardProduct cardProduct';
+    }
+}
+
+@media screen and (max-width: 885px){
+    #holdCardsProducts {
+        grid-template-areas: 'cardProduct cardProduct';
+    }
+}
+
+@media screen and (max-width: 615px){
+    #holdCardsProducts {
+        gap: 5px;
+    }
+}

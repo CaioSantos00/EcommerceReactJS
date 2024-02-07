@@ -1,0 +1,39 @@
+#sectionForms {
+    display: flex;
+    justify-content: center;
+}
+
+#forms {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inputs {
+    font-family: 'Gruppo', sans-serif;
+    color: $corSecundaria;
+    background-color: transparent;
+    border: 1px solid $corSecundaria;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 1.3em;
+}
+
+.inputs::placeholder {
+    color: $corSecundaria;
+}
+
+.holdTwoInputs {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .inputs {
+        width: 100%;
+    }
+}
+
+textarea {
+    resize: none;
+    font-family: 'Gruppo', sans-serif;
+    height: 100px;
+}
