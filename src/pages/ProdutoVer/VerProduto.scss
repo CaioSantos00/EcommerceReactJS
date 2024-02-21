@@ -1,0 +1,67 @@
+@import '../../assets/Sass/variaveis.scss';
+
+#divisionInfos {
+    display: grid;
+    grid-template-areas: 'divCarrosel divInfos';   
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+#divInfos {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+#divHoldTodoTam {
+    margin: 50px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#divTamanhos {
+    display: flex;
+    gap: 5px;
+}
+
+#divAddExclu {
+    display: flex;
+    align-items: center;
+    button {
+        border-radius: 0px;
+        padding: 5px 15px;
+    }   
+    #btnRemove {
+    border-radius:8px 0px 0px 8px;
+    }
+    #btnMais {
+    border-radius: 0px 8px 8px 0px;
+    }
+}
+
+#qtd {
+    border: 1px solid $corSecundaria;
+    font-size: 1.2em;
+    padding: 5px 10px;
+}
+
+#divHoldAddExclu {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.buttonsComFundo {
+    width: 100%;
+    padding: 5px;
+} 
+
+#divDescription {
+    margin-top: 10px;
+    border: 1px solid $corSecundaria;
+    border-radius: 8px;
+    padding: 10px 10px 0px;
+}

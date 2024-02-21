@@ -1,11 +1,23 @@
 @import '../mixins/buttons.scss';
 
 .buttonsComFundo {
-    @include buttons($corSecundaria, $corPrimaria, 1px solid $corSecundaria, 1.2em, 8px);
+    @include buttons($corSecundaria, $corPrimaria, 1px solid $corSecundaria, 1.2em, 5px);
+    font-weight: 600;
+    &:hover {
+        transition: 1s;
+        background-color: $corPrimaria;
+        color: $corSecundaria;
+    }
+    
 }
 
-.buttonsComFundo:hover {
-    transition: 1s;
-    background-color: $corPrimaria;
-    color: $corSecundaria;
+.btnsSemFundo {
+    @include buttons($corPrimaria, $corSecundaria, 1px solid $corSecundaria, 1.2em, 5px);
+    font-weight: 600;
+    &:hover {
+        transition: 1s;
+        background-color: $corSecundaria;
+        color: $corPrimaria;
+    }
+    
 }

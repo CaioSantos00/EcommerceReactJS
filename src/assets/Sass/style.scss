@@ -24,6 +24,13 @@ section {
     margin: 20px 220px;
 }
 
+.linhaRisco {
+    width: 100%;
+    background-color: $corSecundaria;
+    height: 2px;
+    margin: 5px 0px 8px;
+}
+
 @media screen and (max-width: 1017px){
     section {
         margin: 20px 150px;

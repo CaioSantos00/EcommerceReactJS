@@ -1,4 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
 @mixin buttons($background, $color, $border, $fontsize, $padding) {
+    font-family: 'Gruppo', sans-serif;
     background-color: $background;
     color: $color;
     border: $border;

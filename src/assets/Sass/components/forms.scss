@@ -7,6 +7,9 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    .buttonsComFundo {
+        padding: 8px;
+    }
 }
 
 .inputs {
@@ -36,4 +39,10 @@ textarea {
     resize: none;
     font-family: 'Gruppo', sans-serif;
     height: 100px;
+}
+
+.holdEsqueceuLembre-Me {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

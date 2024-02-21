@@ -12,9 +12,9 @@ export default function Contato() {
                     <div className='titlesForms'>Contato</div>
                     <div className='holdTwoInputs'>
                         <input type="text" placeholder='Nome' className='inputs'/>
-                        <input type="text" placeholder='Email' className='inputs'/>
+                        <input type="email" placeholder='Email' className='inputs'/>
                     </div>
-                    <input type="text" placeholder='Telefone' className='inputs'/>
+                    <input type="tel" placeholder='Telefone' className='inputs'/>
                     <textarea placeholder='Coment' className='inputs'></textarea>
                     <button className='buttonsComFundo'>Enviar</button>
             </div>
