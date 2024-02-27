@@ -66,6 +66,14 @@ export default function VerProduto() {
                   </p>
                 </div>
               </div>
+              <div className='divInfosFrete'>
+              <div className="titles">Calcule o frete</div>
+              <div id='resultadoFrete'>
+                        <input type="text" placeholder='Digite seu CEP' className='inputs'/>
+                        <button className='buttonsComFundo'>Calcular</button>
+                    </div>
+                    <span>Valor do frete: R$000.00</span>
+              </div>
             </div>
           </div>
         </section>

@@ -38,5 +38,13 @@
 #resultadoFrete {
     margin: 8px 0px;
     display: flex;
-    margin: 8px 0px;
+    input {
+        font-size: 1.1em;
+        margin-right: 4px;
+        width: 100%;
+    }
+    button {
+        font-size: 1.1em;
+        width: 100px;
+    }
 }
