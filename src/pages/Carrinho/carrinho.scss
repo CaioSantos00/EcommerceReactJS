@@ -1,0 +1,42 @@
+@import '../../assets/Sass/variaveis.scss';
+
+#sectionCarrinho {
+    margin: 20px 200px;         
+}
+
+#holdCar {
+    display: grid;
+    grid-template-areas: 'productsNoCar holdResumoPedido';
+    gap: 15px;
+}
+
+.cardProductCar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    backdrop-filter: blur( 13.5px );
+    background: $corTerciaria;
+    border-radius: 8px;
+    img {
+        width: 150px;
+    }
+}
+
+#holdResumoPedido {
+    padding: 10px;
+    background: $corTerciaria;
+    border-radius: 8px;
+}
+
+#divHoldInfosFrete {
+    border: 1px solid $corSecundaria;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 10px 0px;
+}
+
+#resultadoFrete {
+    margin: 8px 0px;
+    display: flex;
+    margin: 8px 0px;
+}

@@ -10,16 +10,16 @@ export default function Login() {
           <Header />
           <main>
           <section>
-          <div id='forms'> 
+          <form id='forms'> 
           <div className='titlesForms'>Login</div>
-          <input type="email" placeholder='Email' className='inputs'/>
-          <input type="password" placeholder='Senha' className='inputs'/>
+          <input type="email" placeholder='Email' className='inputs' required/>
+          <input type="password" placeholder='Senha' className='inputs' required/>
           <div className='holdEsqueceuLembre-Me'>
             <div className='holdEsqueceuLembre-Me'><input type="checkbox" />Lembrar de mim</div> <Link>Restaurar senha</Link>
           </div>
           <button className='buttonsComFundo'>Entrar</button>
           <span><Link to="/Cadaster">Cadastre-se</Link></span>
-          </div>
+          </form>
           </section>
           </main>
           <Footer/>

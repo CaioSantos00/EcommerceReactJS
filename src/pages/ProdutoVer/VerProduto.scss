@@ -24,6 +24,9 @@
 #divTamanhos {
     display: flex;
     gap: 5px;
+    button {
+        width: auto;
+    }
 }
 
 #divAddExclu {
@@ -64,4 +67,19 @@
     border: 1px solid $corSecundaria;
     border-radius: 8px;
     padding: 10px 10px 0px;
+}
+
+@media screen and (max-width: 1200px){
+    #divisionInfos {
+        grid-template-areas: 'divCarrosel';   
+    }
+}
+
+@media screen and (max-width: 600px){
+    #divCarrosel {
+        width: 300px;
+    }
+    #divInfos {
+        width: 300px;
+    }
 }

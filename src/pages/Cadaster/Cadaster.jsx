@@ -10,16 +10,16 @@ export default function Cadaster() {
           <Header />
           <main>
           <section>
-          <div id='forms'> 
+          <form id='forms'> 
           <div className='titlesForms'>Cadastre-se</div>
-          <input type="text" placeholder='Nome' className='inputs'/>
-          <input type="email" placeholder='Email' className='inputs'/>
-          <input type="password" placeholder='Senha' className='inputs'/>
-          <input type="password" placeholder='Confirme sua senha' className='inputs'/>
-          <input type="tel" placeholder='Telefone' className='inputs'/>
+          <input type="text" placeholder='Nome' className='inputs' required/>
+          <input type="email" placeholder='Email' className='inputs' required/>
+          <input type="password" placeholder='Senha' className='inputs' required/>
+          <input type="password" placeholder='Confirme sua senha' className='inputs' required/>
+          <input type="tel" placeholder='Telefone' className='inputs' required/>
           <button className='buttonsComFundo'>Cadastrar</button>
           <span><Link to="/Login">Já tem uma conta ? Entre</Link></span>
-          </div>
+          </form>
           </section>
           </main>
           <Footer/>
