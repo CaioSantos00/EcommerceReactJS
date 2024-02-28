@@ -4,6 +4,7 @@ import Footer from '../../assets/Components/Footer/Footer';
 import camiseta from '../../assets/imgs/camiseta.png'
 import Carousel from '../../assets/Components/Carrosel/Carrosel';
 import './VerProduto.scss';
+import BtnAddRemove from '../../assets/Components/BtnAddRemove/BtnAddRemove';
 
 export default function VerProduto() {
   const images = [
@@ -51,11 +52,7 @@ export default function VerProduto() {
                 </div>
               </div>
               <div id='divHoldAddExclu'>
-                <div id='divAddExclu'>
-                  <button onClick={remove} disabled={qtd === 1} className='buttonsComFundo' id='btnRemove'>-</button>
-                  <div id='qtd'>{qtd}</div>
-                  <button onClick={add} className='buttonsComFundo' id='btnMais'>+</button>
-                </div>
+                <BtnAddRemove/>
                 <button className='buttonsComFundo'>Comprar</button>
               </div>
               <div id='divDescription'>
@@ -68,7 +65,7 @@ export default function VerProduto() {
               </div>
               <div className='divInfosFrete'>
               <div className="titles">Calcule o frete</div>
-              <div id='resultadoFrete'>
+              <div className='resultadoFrete'>
                         <input type="text" placeholder='Digite seu CEP' className='inputs'/>
                         <button className='buttonsComFundo'>Calcular</button>
                     </div>

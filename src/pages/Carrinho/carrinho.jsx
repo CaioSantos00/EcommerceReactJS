@@ -3,6 +3,7 @@ import Footer from '../../assets/Components/Footer/Footer';
 import camiseta from '../../assets/imgs/camiseta.png'
 import './carrinho.scss';
 import { useState } from 'react';
+import BtnAddRemove from '../../assets/Components/BtnAddRemove/BtnAddRemove';
 
 export default function Carrinho() {
     let [divFrete, setDivFrete] = useState('resultadoFreteEscondido')
@@ -23,7 +24,13 @@ export default function Carrinho() {
                     </div>
                     <div className='infosProducts'>
                         <div>Nome do produto</div>
-                        <div>R$000.00</div>
+                        <div className="divExcluAddInfos"> 
+                        <div>R$000.00</div>  
+                        <div className='divExcluAndBtn'>
+                        <BtnAddRemove/>
+                        <button className='btnsCancel'>Excluir</button>
+                        </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -32,14 +39,16 @@ export default function Carrinho() {
                 <div className="linhaRisco"></div>
                 <div>Subtotal: R$</div>
                 <div onClick={abreFechaDiv} id='divHoldInfosFrete'>
-                    <div id='infFrete'>
-                    <div id='titleFrete'>Calcule seu frete</div>
-                    <div id='resultadoFrete'>
+                
+              <div>Calcule o frete</div>
+              <div className='resultadoFrete'>
                         <input type="text" placeholder='Digite seu CEP' className='inputs'/>
-                        <button>Calcular</button>
+                        <button className='buttonsComFundo'>Calcular</button>
                     </div>
-                    </div>
+                    <span>Valor do frete: R$000.00</span>    
                 </div>
+                <div>Pedido total: R$</div>
+                <button className='buttonsComFundo'>Finalizar</button>
             </div>
             </div>
           </section>
