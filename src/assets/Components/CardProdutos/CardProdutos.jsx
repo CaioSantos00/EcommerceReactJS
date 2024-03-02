@@ -3,15 +3,15 @@ import React from 'react';
 import camiseta from '../../imgs/camiseta.png'
 import './CardProdutos.scss'
 
-export default function CardProduct() {
+export default function CardProduct({nomeProduto, precoProduto}) {
     return (
-        <Link to="/Produto">
+        <Link to={`/Produto/${nomeProduto.id}`}>
             <div className='cardProduct'>
                 <div>
                     <img src={camiseta} alt="Camiseta" />
                 </div>
-                <div className='titleProdutos'>Nome Produto</div>
-                <div className='titleProdutos'>R$000.00</div>
+                <div className='titleProdutos'>{nomeProduto.name}</div>
+                <div className='titleProdutos'>R${precoProduto.price}</div>
             </div>
         </Link>
     )

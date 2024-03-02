@@ -1,12 +1,26 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Header from '../../assets/Components/Header/Header';
 import Footer from '../../assets/Components/Footer/Footer';
 import camiseta from '../../assets/imgs/camiseta.png'
 import Carousel from '../../assets/Components/Carrosel/Carrosel';
 import './VerProduto.scss';
 import BtnAddRemove from '../../assets/Components/BtnAddRemove/BtnAddRemove';
+import { ProductContext } from '../../App';
+import { useParams } from 'react-router-dom';
 
-export default function VerProduto() {
+export default function VerProduto() {  
+  const products = useContext(ProductContext);
+  const { id } = useParams()
+  console.log(products)
+  console.log(id)
+  const resultado = products.find((produto) => produto.id == id)
+  console.log(resultado)
+  /*products.forEach(cadaProduto => {
+    if (id == cadaProduto.id) {
+      console.log(cadaProduto)
+    }    
+  });*/
+
   const images = [
     camiseta,
     'https://via.placeholder.com/500x500',
@@ -28,6 +42,7 @@ export default function VerProduto() {
       setQtd(qtd - 1)
     }
   }
+
   return (
     <>
       <Header />
@@ -38,9 +53,9 @@ export default function VerProduto() {
               <Carousel images={images} />
             </div>
             <div id="divInfos">
-              <div className='titles'>Nome do produto</div>
+              <div className='titles'>{resultado.name}</div>
               <div className='linhaRisco'></div>
-              <div className='titles'>R$000.00</div>
+              <div className='titles'>R${resultado.price}</div>
               <div id='divHoldTodoTam'>
                 <span>Tamanhos</span>
                 <div id='divTamanhos'>
@@ -59,7 +74,7 @@ export default function VerProduto() {
                 <div className="titles">Sobre a peça</div>
                 <div>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam, sed magnam eos inventore rerum beatae quis, facilis suscipit qui veritatis laborum veniam omnis. Magnam earum laboriosam iste, sequi numquam at.
+                    {resultado.description}
                   </p>
                 </div>
               </div>
