@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import "../../../pages/ProdutoVer/VerProduto.scss";
+import { ProductContext } from '../../../App';
 
 export default function BtnAddRemove() {
-
+  const {products} = useContext(ProductContext);
+  //products.map()
   let [qtd, setQtd] = useState(1);
   function add() {
     setQtd(qtd + 1)

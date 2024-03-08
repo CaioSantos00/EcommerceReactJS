@@ -55,10 +55,13 @@
 }
 
 #divHoldAddExclu {
-    margin-top: 10px;
+    margin: 10px 0px;
     display: flex;
     align-items: center;
     gap: 5px;
+    a {
+        width: 100%;
+    }
 }
 
 .buttonsComFundo {

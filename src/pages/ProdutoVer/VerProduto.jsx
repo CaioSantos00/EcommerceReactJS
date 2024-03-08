@@ -6,43 +6,24 @@ import Carousel from '../../assets/Components/Carrosel/Carrosel';
 import './VerProduto.scss';
 import BtnAddRemove from '../../assets/Components/BtnAddRemove/BtnAddRemove';
 import { ProductContext } from '../../App';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
+import BtnsTam from '../../assets/Components/BtnsTam/BtnsTam';
+
+//export const produtosCarContext = createContext([]);
 
 export default function VerProduto() {  
-  const products = useContext(ProductContext);
+  const {products, productsCar, addCart} = useContext(ProductContext);
   const { id } = useParams()
-  console.log(products)
-  console.log(id)
-  const resultado = products.find((produto) => produto.id == id)
-  console.log(resultado)
-  /*products.forEach(cadaProduto => {
-    if (id == cadaProduto.id) {
-      console.log(cadaProduto)
-    }    
-  });*/
 
+  const resultado = products.find((produto) => produto.id == id)
+  console.log(resultado.tam)
   const images = [
     camiseta,
     'https://via.placeholder.com/500x500',
     'https://via.placeholder.com/500x500',
     'https://via.placeholder.com/500x500'
   ]
-  let [tamSele, setTamSele] = useState('btnsSemFundo')
-
-  function corSelecionada(tamanhoSelecionado) {
-    setTamSele(tamanhoSelecionado);
-  }
-
-  let [qtd, setQtd] = useState(1);
-  function add() {
-    setQtd(qtd + 1)
-  }
-  function remove() {
-    if (qtd > 0) {
-      setQtd(qtd - 1)
-    }
-  }
-
+  
   return (
     <>
       <Header />
@@ -59,17 +40,23 @@ export default function VerProduto() {
               <div id='divHoldTodoTam'>
                 <span>Tamanhos</span>
                 <div id='divTamanhos'>
-                  <button onClick={() => corSelecionada('PP')} className={tamSele === 'PP' ? 'buttonsComFundo' : 'btnsSemFundo'}>PP</button>
-                  <button onClick={() => corSelecionada('P')} className={tamSele === 'P' ? 'buttonsComFundo' : 'btnsSemFundo'}>P</button>
-                  <button onClick={() => corSelecionada('M')} className={tamSele === 'M' ? 'buttonsComFundo' : 'btnsSemFundo'}>M</button>
-                  <button onClick={() => corSelecionada('G')} className={tamSele === 'G' ? 'buttonsComFundo' : 'btnsSemFundo'}>G</button>
-                  <button onClick={() => corSelecionada('GG')} className={tamSele === 'GG' ? 'buttonsComFundo' : 'btnsSemFundo'}>GG</button>
+                  {
+                    resultado.tam.map((tamDispo) => {
+                     return <BtnsTam tamanho={tamDispo} />
+                    })
+                  }
                 </div>
               </div>
+              
               <div id='divHoldAddExclu'>
                 <BtnAddRemove/>
-                <button className='buttonsComFundo'>Comprar</button>
+                <Link to="/Carrinho"><button className='buttonsComFundo' onClick={() => addCart(resultado)}>Comprar</button></Link>
               </div>
+              <button className='buttonsComFundo' onClick={() => 
+                  {
+                    alert("Adicionado ao carrinho")
+                    addCart(resultado)
+                  }}>Adicionar ao Carrinho</button>
               <div id='divDescription'>
                 <div className="titles">Sobre a peça</div>
                 <div>

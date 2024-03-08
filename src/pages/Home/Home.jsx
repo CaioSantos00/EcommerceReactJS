@@ -7,7 +7,7 @@ import { ProductContext } from '../../App';
 import {useNavigate } from 'react-router-dom';
 
 export default function Home() {
-  const products = useContext(ProductContext);
+  const {products} = useContext(ProductContext);
   const navegacao = useNavigate()
 
   function clicou(produto) {

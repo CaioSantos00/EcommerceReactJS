@@ -7,10 +7,12 @@
 #holdCar {
     display: grid;
     grid-template-areas: 'productsNoCar holdResumoPedido';
+    align-items: start;
     gap: 15px;
 }
 
 .cardProductCar {
+    margin: 10px 0px;
     display: flex;
     padding: 10px;
     backdrop-filter: blur( 13.5px );

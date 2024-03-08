@@ -1,16 +1,21 @@
 import Header from '../../assets/Components/Header/Header';
 import Footer from '../../assets/Components/Footer/Footer';
-import camiseta from '../../assets/imgs/camiseta.png'
 import './carrinho.scss';
-import { useState } from 'react';
-import BtnAddRemove from '../../assets/Components/BtnAddRemove/BtnAddRemove';
+import { useContext, useState } from 'react';
+import { CardCar } from '../../assets/Components/CardProductCar/CardCar';
+import { ProductContext } from "../../App"
 
 export default function Carrinho() {
+    const { productsCar } = useContext(ProductContext)
+    console.log(productsCar)
+
     let [divFrete, setDivFrete] = useState('resultadoFreteEscondido')
 
     function abreFechaDiv() {
         setDivFrete('resultadoFrete')
     }
+
+
     return (
         <>
           <Header />
@@ -18,21 +23,11 @@ export default function Carrinho() {
           <section id='sectionCarrinho'>
             <div id='holdCar'>
             <div id="productsNoCar">
-                <div className="cardProductCar">
-                    <div>
-                        <img src={camiseta} alt="Produto" />
-                    </div>
-                    <div className='infosProducts'>
-                        <div>Nome do produto</div>
-                        <div className="divExcluAddInfos"> 
-                        <div>R$000.00</div>  
-                        <div className='divExcluAndBtn'>
-                        <BtnAddRemove/>
-                        <button className='btnsCancel'>Excluir</button>
-                        </div>
-                        </div>
-                    </div>
-                </div>
+                {productsCar.length == 0 && <div>Sem Produtos no carrinho</div> }
+                {
+                productsCar.map((product) => (
+                    <CardCar nome={product.name} preco={product.price}/>
+                ))}
             </div>
             <div id='holdResumoPedido'>
                 <div className="titles">Resumo do pedido</div>
